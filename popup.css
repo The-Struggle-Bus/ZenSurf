@@ -75,23 +75,23 @@ main {
     color: #fff;
   }
   
-  /* Style the breathe containers */
-  .breathe-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
+/* Style the breathe containers */
+.breathe-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
 
-  /* Style the ambientSound containers */
-  .ambientSound-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
+/* Style the ambientSound containers */
+.ambientSound-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
 
 /* Style the video element */
 video {
