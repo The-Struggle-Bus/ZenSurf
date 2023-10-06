@@ -65,7 +65,7 @@ main {
     margin: 0 auto; /* Center image horizontally */
   }
   
-  .activity-btn .bteathe-txt,
+  .activity-btn .breathe-txt,
   .activity-btn .meditation-txt,
   .activity-btn .ambientSound-txt {
     display: block;
@@ -101,8 +101,8 @@ video {
   }
 
 /* Style the "Play" button for the audio */
-#play-sound-button {
-  background-color: #28a745;
+.play-button {
+  background-color: transparent;
   color: #fff;
   padding: 10px 20px;
   border: none;
