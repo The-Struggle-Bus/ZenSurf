@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+    <title>ZenSurf</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-container">
+      <header>
+        <img src="/images/icon.png" />
+      </header>
+      <a>
+        <button id="extend-button">Extend</button>
+        <p class="extend.html"></p>
+      </a>
+    </div>
+    <main>
+      <div class="button-container">
+        <!-- Extension's content -->
+        <button class="activity-btn breathe" id="breathe-button">
+          <img src="/images/Breathe.png" alt="Breathe" />
+          <span class="bteathe-txt">Breathe</span>
+        </button>
+        <button class="activity-btn meditation">
+          <img src="/images/Meditation.png" alt="Meditation" />
+          <span class="meditation-txt">Meditation</span>
+        </button>
+        <button class="activity-btn ambientSound">
+          <img src="/images/AmbientSound.png" alt="AmbientSound" />
+          <span class="ambientSound-txt">Ambient Sound</span>
+        </button>
+      </div>
+
+      <div id="exercise-content">
+        <!-- The content of the selected exercise will be displayed here -->
+        <!-- Breathe option -->
+        <div class="breathe-container">
+          <video id="breathe-video" poster="images/Breathe.png" autoplay loop>
+            <source src="/videos/breathe-video.mp4" type="video/mp4" />
+            Your browser does not support the video
+          </video>
+        </div>
+        <!-- Ambient Sound Option-->
+        <div class="ambientSound-container">
+          <audio id="ambientSound-audio" autoplay>
+            <source src="/audio/ambientSound.mp3" type="audio/mpeg" />
+            Your browser does not support the audio
+          </audio>
+          <button id="play-sound-button">Play</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 ZenSurf</p>
+    </footer>
+
+    <!-- Include your JavaScript file for functionality -->
+    <script src="popup.js"></script>
+  </body>
+</html>

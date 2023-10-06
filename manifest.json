@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "ZenSurf",
+    "version": "1.0.0",
+    "author": "The Struggle Bus",
+    "description": "Provide various exercises to reduce anxiety without changing tab",
+    "icons": {
+        "16": "/images/icon.png",
+        "32": "/images/icon.png",
+        "48": "/images/icon.png",
+        "128": "/images/icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "ZenSurf",
+        "default_icon": "/images/icon.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "js": ["scripts/popup.js"],
+            "matches": [
+                "https://www.google.com/*",
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome/docs/webstore/*"
+            ]
+        }
+    ]
+}
