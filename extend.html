@@ -7,49 +7,51 @@
     <!-- Include any additional CSS or JavaScript files here if needed -->
   </head>
   <body>
-    <div class="popup-container">
-      <header>
-        <img src="icon.png" />
-      </header>
-      <a>
-        <button id="extend-button">Extend</button>
-        <p class="extend.html"></p>
-      </a>
-    </div>
+    <header>
+      <img src="icon.png" />
+      <h1>Extend Options</h1>
+    </header>
+    <a>
+      <button id="customize-button">Customize</button>
+      <p class="customize.html"></p>
+    </a>
+
     <main>
       <div class="button-container">
         <!-- Extension's content -->
-        <button class="activity-btn breathe" id="breathe-button">
-          <img src="Breathe.png" alt="Breathe" />
-          <span class="bteathe-txt">Breathe</span>
+        <button class="activity-btn quote" id="quote-button">
+          <img src="Quote.png" alt="Quote" />
+          <span class="quote-txt">Quotes</span>
         </button>
-        <button class="activity-btn meditation">
-          <img src="Meditation.png" alt="Meditation" />
-          <span class="meditation-txt">Meditation</span>
+        <button class="activity-btn visual" id="visual-button">
+          <img src="Visual.png" alt="Visual" />
+          <span class="visual-txt">Visuals</span>
         </button>
-        <button class="activity-btn ambientSound">
-          <img src="AmbientSound.png" alt="AmbientSound" />
-          <span class="ambientSound-txt">Ambient Sound</span>
+        <button class="activity-btn podcast">
+          <img src="Podcast.png" alt="Podcast" />
+          <span class="podcast-txt">Podcast</span>
+        </button>
+        <button class="activity-btn movement">
+          <img src="Movement.png" alt="Movement" />
+          <span class="movement-txt">Movements</span>
         </button>
       </div>
 
+      <a>
+        <button id="customerFeedback-button">Customer Feedback</button>
+        <p class="customerFeedback.html"></p>
+      </a>
+
       <div id="exercise-content">
         <!-- The content of the selected exercise will be displayed here -->
-        <!-- Breathe option -->
-        <div class="breathe-container">
-          <video id="breathe-video" poster="images/Breathe.png" autoplay loop>
-            <source src="breathe-video.mp4" type="video/mp4" />
-            Your browser does not support the video
-          </video>
-        </div>
-        <!-- Ambient Sound Option-->
-        <div class="ambientSound-container">
-          <audio id="ambientSound-audio">
-            <source src="ambientSound.mp3" type="audio/mpeg" />
-            Your browser does not support the audio
-          </audio>
-          <button id="play-sound-button">Play</button>
-        </div>
+        <!-- Quote option -->
+        <div class="quote-container"></div>
+        <!-- Visual Option-->
+        <div class="visual-container"></div>
+        <!-- Podcast Option-->
+        <div class="podcast-container"></div>
+        <!-- Movement Option-->
+        <div class="movement-container"></div>
       </div>
     </main>
     <footer>
