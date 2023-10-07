@@ -17,15 +17,15 @@
     },
     "permissions": [
         "tabs"
+    ],
+    "content_scripts": [
+        {
+            "js": ["popup.js"],
+            "matches": [
+                "https://www.google.com/*",
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome/docs/webstore/*"
+            ]
+        }
     ]
-    // "content_scripts": [
-    //     {
-    //         "js": ["popup.js"],
-    //         "matches": [
-    //             "https://www.google.com/*",
-    //             "https://developer.chrome.com/docs/extensions/*",
-    //             "https://developer.chrome/docs/webstore/*"
-    //         ]
-    //     }
-    // ]
 }
