@@ -5,27 +5,27 @@
     "author": "The Struggle Bus",
     "description": "Provide various exercises to reduce anxiety without changing tab",
     "icons": {
-        "16": "icon.png",
-        "32": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
     },
     "action": {
         "default_popup": "popup.html",
         "default_title": "ZenSurf",
-        "default_icon": "icon.png"
+        "default_icon": "images/icon.png"
     },
     "permissions": [
         "tabs"
-    ],
-    "content_scripts": [
-        {
-            "js": ["popup.js"],
-            "matches": [
-                "https://www.google.com/*",
-                "https://developer.chrome.com/docs/extensions/*",
-                "https://developer.chrome/docs/webstore/*"
-            ]
-        }
     ]
+    // "content_scripts": [
+    //     {
+    //         "js": ["popup.js"],
+    //         "matches": [
+    //             "https://www.google.com/*",
+    //             "https://developer.chrome.com/docs/extensions/*",
+    //             "https://developer.chrome/docs/webstore/*"
+    //         ]
+    //     }
+    // ]
 }
