@@ -4,51 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extend Options</title>
-    <!-- Include any additional CSS or JavaScript files here if needed -->
+    <link rel="stylesheet" href="extend.css" />
   </head>
   <body>
-    <div class="popup-container">
+    <div class="extend-container">
       <header>
-        <img src="icon.png" />
+        <h1>ZenSurf</h1>
+        <img src="/images/icon.png" />
       </header>
       <a>
-        <button id="extend-button">Extend</button>
-        <p class="extend.html"></p>
+        <button id="customize-button">Customize</button>
+        <p class="customize.html"></p>
       </a>
     </div>
     <main>
       <div class="button-container">
         <!-- Extension's content -->
+
+        <button class="activity-btn quote" id="quote-button">
+          <img src="/images/Quote.png" alt="Quote" />
+          <span class="quote-txt">Quotes</span>
+        </button>
+        <button class="activity-btn visual" id="visual-button">
+          <img src="/images/Visual.png" alt="Visual" />
+          <span class="visual-txt">Visuals</span>
+        </button>
+        <button class="activity-btn podcast" id="podcast-button">
+          <img src="/images/Podcast.png" alt="Podcast" />
+          <span class="podcast-txt">Podcast</span>
+        </button>
+        <button class="activity-btn movement" id="movement-button">
+          <img src="/images/Movement.png" alt="Movement" />
+          <span class="movement-txt">Movements</span>
+
         <button class="activity-btn breathe" id="breathe-button">
-          <img src="Breathe.png" alt="Breathe" />
-          <span class="bteathe-txt">Breathe</span>
+          <img src="images/Breathe.png" alt="Breathe" />
+          <span class="breathe-txt">Breathe</span>
         </button>
         <button class="activity-btn meditation">
-          <img src="Meditation.png" alt="Meditation" />
+          <img src="/images/Meditation.png" alt="Meditation" />
           <span class="meditation-txt">Meditation</span>
         </button>
         <button class="activity-btn ambientSound">
-          <img src="AmbientSound.png" alt="AmbientSound" />
+          <img src="/images/AmbientSound.png" alt="AmbientSound" />
           <span class="ambientSound-txt">Ambient Sound</span>
+
         </button>
       </div>
 
-      <div id="exercise-content">
-        <!-- The content of the selected exercise will be displayed here -->
-        <!-- Breathe option -->
-        <div class="breathe-container">
-          <video id="breathe-video" poster="images/Breathe.png" autoplay loop>
-            <source src="breathe-video.mp4" type="video/mp4" />
-            Your browser does not support the video
-          </video>
+      <div id="option-content">
+        <!-- The content of the selected option will be displayed here -->
+        <!-- Quote option -->
+        <div class="quote-container">
+          <img src="/images/Quote_1.png" alt="DailyQuote_1" />
+          Your browser does not support the image
         </div>
-        <!-- Ambient Sound Option-->
-        <div class="ambientSound-container">
-          <audio id="ambientSound-audio">
-            <source src="ambientSound.mp3" type="audio/mpeg" />
+        <!-- Visual Option-->
+        <div class="visual-container">
+          <img src="/images/Visual_1.png" alt="Visual_1" />
+          Your browser does not support the image
+        </div>
+        <!-- Podcast Option-->
+        <div class="podcast-container">
+          <audio id="podcast-audio">
+            <source src="empty" type="audio/mpeg" />
             Your browser does not support the audio
           </audio>
           <button id="play-sound-button">Play</button>
+        </div>
+        <!-- Movement Option-->
+        <div class="movement-container">
+          <img src="/images/Movement_1.png" alt="Movement_1" />
+          Your browser does not support the image
         </div>
       </div>
     </main>
