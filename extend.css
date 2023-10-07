@@ -1,13 +1,12 @@
 /* Reset default margin and padding */
 body {
     margin: 0;
-    width: 646px;
+    width: 100%;
     padding: 0px;
-}
-
-/* Set a background color for the popup */
-body {
-    background-color: #acdeed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ;
 }
 
 /* Style the header image */
