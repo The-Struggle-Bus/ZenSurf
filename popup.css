@@ -3,6 +3,13 @@ body {
     margin: 0;
     width: 646px;
     padding: 0px;
+
+      background-image: url('https://usagif.com/wp-content/uploads/gifs/water-99.gif');
+      background-size: cover; /* This will ensure the gif covers the entire viewport */
+      background-repeat: no-repeat; /* To avoid the gif from repeating */
+      background-position: center center; /* To center the gif */
+  
+  
 }
 
 /* Set a background color for the popup */
@@ -24,8 +31,16 @@ header img {
     justify-content: space-between; /* Push items apart to the left and right */
     align-items: center;/* Vertically align items */
     padding: 10px; /* Add padding to the container */
-}
 
+}
+.icon {
+  width:65px;
+  height: 65px;
+  margin-left: 10px;
+}
+.features-container {
+  margin-top: 20px;
+}
 /* Style the "Extend" button */
 #extend-button {
     width: fit-content;
@@ -38,88 +53,104 @@ header img {
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 }
 
+#extend-button:hover {
+  transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
+  transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
+}
+/*style only when you press the breathe button*/
+#extend-button:active {
+  transform: scale(.9); /* This will make the button scale up to 110% of its original size */
+  transition: transform 0.3s;
+}
 /* Style the main content area */
 main {
     padding: 0px;
 }
-/*TESTTTTTTTTTTTTTTTTTT*/
-/* Style the exercise buttons */
-.activity-btn {
+/* Style the meditation, breathe, and ambient sound */
+.breathe-btn, .meditation, .ambient-sound {
     display: inline-block;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
     border: none;
-    cursor: pointer;
     background-color: transparent;
     text-align: center;
     flex-direction: column; /* Stack text below the image */
     align-items: center; /* Center align text and image horizontally */
     transition: transform 0.3s;
-}
+    position: relative;
+  }
   
-  .activity-btn img {
+  .breathe-img, .meditation-img, .ambient-img {
     width: 158px; /* Adjust the width as needed */
     height: 158px; /* Adjust the height as needed */
     display: block;
     margin: 0 auto; /* Center image horizontally */
   }
   
-  .activity-btn .breathe-txt,
-  .activity-btn .meditation-txt,
-  .activity-btn .ambientSound-txt {
+  /*style breathe, meditation and ambient text*/
+  .breathe-txt,
+  .meditation-txt,
+  .ambient-txt {
     display: block;
     margin-top: 5px;
     font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #fff;
   }
   
-  /* Style the breathe containers */
-  .breathe-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
+  /*style play button*/
+  .play-btn {
+    position: absolute;
+    top: 75%; /* Center the button vertically */
+    left: 50%; /* Center the button horizontally */
+    transform: translate(-50%, -50%); /* Ensures the button is perfectly centered, not top-left aligned to the center */
+    background: transparent; /* Assuming you want no background for the button */
+    border: none; /* Removes border */
+    cursor: pointer;
+  }
+  /*style play button img*/
+  .play-img {
+    border-radius: 30px;
+    top: 100px;
   }
 
-  /* Style the ambientSound containers */
-  .ambientSound-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
+  /*styling only when hovering over play button */
+  .play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1); 
+    transition: transform 0.3s ease-in-out;
+  }
+  /*styling only when pressing the play button*/
+  .play-btn:active {
+    transform: translate(-50%, -50%) scale(.8); /*scale down*/
+    transition: transform 0.3s ease-in-out;
+  }
+  /* styles only specific to the breathe button*/
+  .breathe-btn {
+    cursor: pointer;
+  }
+  /*styling only when hovering over breathe button */
+  .breathe-btn:hover {
+    transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
+    transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
+  }
+  /*style only when you press the breathe button*/
+
+  .breathe-btn:active {
+    transform: scale(.9); /* This will make the button scale up to 110% of its original size */
+    transition: transform 0.3s;
   }
 
-/* Style the video element */
-video {
+  
+  /* Style the video element */
+  video {
     max-width: 100%;
     height: auto;
     display: block;
   }
-
-/* Style the "Play" button for the audio */
-#play-sound-button {
-  background-color: #28a745;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
 /* Style the footer with a background color, text color, and padding */
 footer {
     color: #fff;
     padding: 10px;
     text-align:left;
-}
-
-/* Add a hover effect to the buttons */
-button:hover {
-    background-color: transparent;
-    transform: scale(1.1);
 }

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=2.0" />
     <title>ZenSurf</title>
     <link rel="stylesheet" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="popup-container">
       <header>
-        <img src="images/icon.png" />
+        <img class ="icon" src="images/Z.png" />
       </header>
       <a>
         <button id="extend-button">Extend</button>
@@ -17,39 +20,29 @@
       </a>
     </div>
     <main>
-      <div class="button-container">
-        <!-- Extension's content -->
-        <button class="activity-btn breathe" id="breathe-button">
-          <img src="images/Breathe.png" alt="Breathe" />
+      <div class="features-container">
+        <!-- Popup content -->
+        <button class="breathe-btn">
+          <img class = "breathe-img" src="images/Breathe.png" />
           <span class="breathe-txt">Breathe</span>
         </button>
-        <button class="activity-btn meditation">
-          <img src="images/Meditation.png" alt="Meditation" />
+        <div class = "meditation">
+          <img class = "meditation-img" src="images/Meditation.png"/>
           <span class="meditation-txt">Meditation</span>
-        </button>
-        <button class="activity-btn ambientSound">
-          <img src="images/Ambient.png" alt="AmbientSound" />
-          <span class="ambientSound-txt">Ambient Sound</span>
-        </button>
+        </div>
+        <div class="ambient-sound">
+          <img class = "ambient-img" src="images/Ambient.png" />
+          <button class = "play-btn">
+            <img class =  "play-img" src = "images/Play.png" id="playPauseIcon">
+          </button>
+          <span class="ambient-txt">Ambient Sound</span>
+        </div>
       </div>
+
 
       <div id="exercise-content">
         <!-- The content of the selected exercise will be displayed here -->
-        <!-- Breathe option -->
-        <div class="breathe-container">
-          <video id="breathe-video" poster="/images/Breathe.png" autoplay loop>
-            <source src="empty" type="video/mp4" />
-            Your browser does not support the video
-          </video>
-        </div>
-        <!-- Ambient Sound Option-->
-        <div class="ambientSound-container">
-          <audio id="ambientSound-audio" autoplay>
-            <source src="audio/ambientSound.mp3" type="audio/mpeg" />
-            Your browser does not support the audio
-          </audio>
-          <button id="play-sound-button">Play</button>
-        </div>
+        <audio id="ambientSound" src="audio/ambientSound.mp3"></audio>
       </div>
     </main>
     <footer>
