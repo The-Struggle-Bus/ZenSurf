@@ -86,6 +86,7 @@ main {
     height: 158px; /* Adjust the height as needed */
     display: block;
     margin: 0 auto; /* Center image horizontally */
+    opacity: .8;
   }
   
   /*style breathe, meditation and ambient text*/
