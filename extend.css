@@ -4,24 +4,16 @@ body {
     width: 100%;
     padding: 0px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    background-color: #acdeed;
 }
 
 /* Style the header image */
 header img {
-    display: inline-block;
-    vertical-align: top;
     width: 98px;
     height: 98px;
-}
-
-/* Style the popup-container */
-.extend-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Push items apart to the left and right */
-    align-items: center;/* Vertically align items */
-    padding: 10px; /* Add padding to the container */
 }
 
 /* Style the “customize” button */
@@ -39,29 +31,37 @@ header img {
 /* Style the main content area */
 main {
     padding: 0px;
+    flex-grow: 1; /* Allow the main content to grow and take up remaining space */
 }
 
 /* Style the option buttons */
 .button-container {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /* 2x2 grid */
+    gap: 100px;
+    margin: 10px;
     border: none;
     cursor: pointer;
     background-color: transparent;
     text-align: center;
     flex-direction: column; /* Stack text below the image */
-    align-items: center; /* Center align text and image horizontally */
     transition: transform 0.3s;
 }
   
+  .activity-btn {
+    width: 100%; /* Adjust the width as needed */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
   .activity-btn img {
     width: 158px; /* Adjust the width as needed */
     height: 158px; /* Adjust the height as needed */
     display: block;
     margin: 0 auto; /* Center image horizontally */
-  }
+}
   
   .activity-btn .quote-txt,
   .activity-btn .visual-txt,
@@ -126,7 +126,8 @@ main {
 footer {
     color: #fff;
     padding: 10px;
-    text-align:left;
+    text-align: left;
+    align-self: flex-start;
 }
 
 /* Add a hover effect to the buttons */
