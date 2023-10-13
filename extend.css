@@ -14,6 +14,9 @@ body {
 header img {
     width: 98px;
     height: 98px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1px;
 }
 
 /* Style the “customize” button */
@@ -124,11 +127,40 @@ main {
 
 /* Style the footer with a background color, text color, and padding */
 footer {
+    display: flex;
     color: #fff;
     padding: 10px;
     text-align: left;
     align-self: flex-start;
 }
+
+#feedback {
+  background-color: #ADD8E6;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: solid;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#feedbackPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 9999;
+}
+
 
 /* Add a hover effect to the buttons */
 button:hover {
