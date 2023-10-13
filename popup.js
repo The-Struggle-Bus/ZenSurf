@@ -4,13 +4,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const extendButton = document.getElementById('extend-button');
 
     // Get the video element
-    const breatheVideo = document.getElementById('breathe-video');
+    // const breatheVideo = document.getElementById('breathe-video');
 
     // Get the ambient sound element
-    const ambientSound = document.getElementById('ambientSound-audio');
+    const ambientSound = document.getElementById('ambientSound');
 
     // Get the "Play" button element
-    const playSoundButton = document.getElementById('play-sound-button');
+    const playSoundButton = document.querySelector('.play-btn');
+
+    const playPauseIcon = document.getElementById("playPauseIcon")
+
+    //help toggle between play and pause
+    let isPlaying = false;
 
      // Function to handle the "Extend" button click
      function openExtendOptions() {
@@ -21,29 +26,26 @@ document.addEventListener('DOMContentLoaded', function () {
         chrome.tabs.create({ url: extendOptionsUrl });
     }
 
-    // Function to play the ambient sound
-    function playAmbientSound() {
-        ambientSound.play();
-    }
+    function toggleAmbientSound() {
+        if (isPlaying) {
+            ambientSound.pause();
+            playPauseIcon.src = "images/Play.png";
+        } else {
+            ambientSound.play();
+            playPauseIcon.src = "images/Pause.png";
+        }
+        isPlaying = !isPlaying; // toggle the flag
 
-    // Function to stop the ambient sound
-    function stopAmbientSound() {
-        ambientSound.pause();
-        ambientSound.currentTime = 0; // Reset the audio to the beginning
     }
 
     // Add a click event listener to the "Extend" button
     extendButton.addEventListener('click', openExtendOptions);
 
     // Add a mouseover event listener to start playing the video
-    playBreatheVideoButton.addEventListener('mouseover', playBreatheVideo);
+    // playBreatheVideoButton.addEventListener('mouseover', playBreatheVideo);
 
     // Add a mouseout event listener to stop the video
-    playBreatheVideoButton.addEventListener('mouseout', pauseBreatheVideo);
+    // playBreatheVideoButton.addEventListener('mouseout', pauseBreatheVideo);
 
-    // Add a mouseover event listener to start playing the sound when the button is clicked
-    playSoundButton.addEventListener('click', playAmbientSound);
-
-    // Add a mouseout event listener to stop the sound when the button is clicked
-    playSoundButton.addEventListener('click', stopAmbientSound);
+   playSoundButton.addEventListener("click", toggleAmbientSound);
 });
