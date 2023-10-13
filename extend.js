@@ -1,6 +1,11 @@
 // You can add JavaScript code for displaying meditative quotes, calming visuals,
 // podcast player, and yoga poses slideshow here.
 
+// Add an event listener to the feedback button
+document.getElementById("feedback").addEventListener("click", function () {
+    toggleFeedbackPopup();
+});
+
 function toggleFeedbackPopup() {
     var feedbackPopup = document.getElementById("feedbackPopup");
     feedbackPopup.classList.toggle("hidden");

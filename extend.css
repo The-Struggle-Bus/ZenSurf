@@ -25,6 +25,8 @@ header img {
     background-color: #00ade2;
     color: #000;
     padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
     border: none;
     border-radius: 15px; /* Add border-radius for rounded edges */
     cursor: pointer;
@@ -135,14 +137,18 @@ footer {
 }
 
 #feedback {
-  background-color: #ADD8E6;
+  width: fit-content;
+  background-color: #00ade2;
+  color: #000;
   position: fixed;
   bottom: 0;
   right: 0;
-  border: solid;
+  border: none;
+  border-radius: 15px; /* Add border-radius for rounded edges */
   margin: 10px;
   padding: 10px 20px;
   font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   cursor: pointer;
 }
 
@@ -160,7 +166,6 @@ footer {
   border: 1px solid black;
   z-index: 9999;
 }
-
 
 /* Add a hover effect to the buttons */
 button:hover {
