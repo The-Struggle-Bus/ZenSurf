@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--we're ein lucy branch-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +7,14 @@
     <link rel="stylesheet" href="extend.css" />
   </head>
   <body>
-    <!-- this is a test -->
     <div class="extend-container">
       <header>
         <img src="images/icon.png" />
+        <a>
+          <button id="customize-button">Customize</button>
+          <p class="customize.html"></p>
+        </a>
       </header>
-      <a>
-        <button id="customize-button">Customize</button>
-        <p class="customize.html"></p>
-      </a>
     </div>
     <main>
       <div class="button-container">
@@ -68,8 +66,27 @@
       </div>
     </main>
     <footer>
+      <button id="feedback">Feedback</button>
       <p>&copy; 2023 ZenSurf</p>
     </footer>
+    <div id="feedbackPopup" class="hidden">
+      <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Submit" />
+        <button id="cancel">Cancel</button>
+      </form>
+    </div>
 
     <!-- Include your JavaScript file for functionality -->
     <script src="extend.js"></script>
