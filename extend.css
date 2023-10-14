@@ -5,7 +5,6 @@ body {
     padding: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: #acdeed;
 }
 
@@ -19,9 +18,8 @@ header {
 
 /* Style the header image */
 header img {
-    width: 98px;
-    height: 98px;
-    display: block;
+    width: 108px;
+    height: 108px;
 }
 
 /* Style the “customize” button */
@@ -29,13 +27,15 @@ header img {
     width: fit-content;
     background-color: #00ade2;
     color: #000;
+    position: fixed;
+    top: 10px;
+    right: 10px;
     padding: 10px 20px;
-    display: flex;
-    justify-content: flex-end;
     border: none;
     border-radius: 15px; /* Add border-radius for rounded edges */
     cursor: pointer;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-size: 17px;
 }
 
 /* Style the main content area */
@@ -48,7 +48,7 @@ main {
 .button-container {
     display: grid;
     grid-template-columns: repeat(2,1fr); /* 2x2 grid */
-    gap: 100px;
+    gap: 60px;
     margin: 10px;
     border: none;
     cursor: pointer;
@@ -67,8 +67,8 @@ main {
   }
 
   .activity-btn img {
-    width: 158px; /* Adjust the width as needed */
-    height: 158px; /* Adjust the height as needed */
+    width: 188px; /* Adjust the width as needed */
+    height: 188px; /* Adjust the height as needed */
     display: block;
     margin: 0 auto; /* Center image horizontally */
 }
@@ -79,7 +79,7 @@ main {
   .activity-btn .movement-txt {
     display: block;
     margin-top: 5px;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
     color: #fff;
   }
@@ -139,7 +139,7 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: left;
-    align-self: flex-start;
+    align-self: baseline;
 }
 
 #feedback {
@@ -147,13 +147,13 @@ footer {
   background-color: #00ade2;
   color: #000;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   border: none;
   border-radius: 15px; /* Add border-radius for rounded edges */
   margin: 10px;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 17px;
   font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
   cursor: pointer;
 }
@@ -221,6 +221,7 @@ footer {
 #feedbackForm input[type="submit"]:hover,
 #feedbackForm button:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
 }
 
 /* Add a hover effect to the buttons */
