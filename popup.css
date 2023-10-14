@@ -135,13 +135,12 @@ main {
     transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
     transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
   }
+  
   /*style only when you press the breathe button*/
-
   .breathe-btn:active {
     transform: scale(.9); /* This will make the button scale up to 110% of its original size */
     transition: transform 0.3s;
   }
-
   
   /* Style the video element */
   video {

@@ -6,17 +6,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     background-color: #acdeed;
+}
+
+/* Style the header image and customize button */
+header {
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center;
+  padding: 10px; /* Add padding to the header */
 }
 
 /* Style the header image */
 header img {
     width: 98px;
     height: 98px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 1px;
+    display: block;
 }
 
 /* Style the “customize” button */
@@ -130,6 +135,7 @@ main {
 /* Style the footer with a background color, text color, and padding */
 footer {
     display: flex;
+    justify-content: space-between;
     color: #fff;
     padding: 10px;
     text-align: left;
@@ -158,6 +164,7 @@ footer {
 
 #feedbackPopup {
   position: fixed;
+  width: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -165,6 +172,55 @@ footer {
   padding: 20px;
   border: 1px solid black;
   z-index: 9999;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Style the feedback form elements within the popup */
+#feedbackForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#feedbackForm label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#feedbackForm input[type="text"],
+#feedbackForm input[type="email"],
+#feedbackForm input[type="text"],
+#feedbackForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#feedbackForm textarea {
+  height: 100px;
+}
+
+#feedbackForm input[type="submit"],
+#feedbackForm button {
+    background-color: #00ade2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#feedbackForm input[type="submit"]:hover,
+#feedbackForm button:hover {
+    background-color: #0056b3;
 }
 
 /* Add a hover effect to the buttons */
