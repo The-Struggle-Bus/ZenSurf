@@ -6,6 +6,10 @@ document.getElementById("feedback").addEventListener("click", function () {
     toggleFeedbackPopup();
 });
 
+document.getElementById("cancel").addEventListener("click", function () {
+    toggleFeedbackPopup();
+});
+
 function toggleFeedbackPopup() {
     var feedbackPopup = document.getElementById("feedbackPopup");
     feedbackPopup.classList.toggle("hidden");
@@ -25,7 +29,6 @@ function submitFeedback() {
         alert("Thank you for your feedback!");
       });
 }
-
 
 var playButton = document.getElementById("playButton");
 var audioPlayer = document.getElementById("audioPlayer");
