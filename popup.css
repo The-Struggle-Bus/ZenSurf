@@ -1,41 +1,39 @@
 /* Reset default margin and padding */
 body {
-    margin: 0;
-    width: 646px;
-    padding: 0px;
+  margin: 0;
+  width: 646px;
+  padding: 0px;
 
-      background-image: url('https://usagif.com/wp-content/uploads/gifs/water-99.gif');
-      background-size: cover; /* This will ensure the gif covers the entire viewport */
-      background-repeat: no-repeat; /* To avoid the gif from repeating */
-      background-position: center center; /* To center the gif */
-  
-  
+  background-image: url("https://usagif.com/wp-content/uploads/gifs/water-99.gif");
+  background-size: cover; /* This will ensure the gif covers the entire viewport */
+  background-repeat: no-repeat; /* To avoid the gif from repeating */
+  background-position: center center; /* To center the gif */
 }
 
 /* Set a background color for the popup */
 body {
-    background-color: #acdeed;
+  background-color: #acdeed;
 }
 
 /* Style the header image */
 header img {
-    display: inline-block;
-    vertical-align: top;
-    width: 98px;
-    height: 98px;
+  display: inline-block;
+  vertical-align: top;
+  width: 98px;
+  height: 98px;
 }
 
 /* Style the popup-container */
 .popup-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Push items apart to the left and right */
-    align-items: center;/* Vertically align items */
-    padding: 10px; /* Add padding to the container */
-
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Push items apart to the left and right */
+  align-items: center; /* Vertically align items */
+  padding: 10px; /* Add padding to the container */
 }
 .icon {
-  width:65px;
-  height: 65px;
+  margin-top: -20px;
+  width: 100px;
+  height: 100px;
   margin-left: 10px;
 }
 .features-container {
@@ -43,115 +41,233 @@ header img {
 }
 /* Style the "Extend" button */
 #extend-button {
-    width: fit-content;
-    background-color: #00ade2;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px; /* Add border-radius for rounded edges */
-    cursor: pointer;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  width: fit-content;
+  background-color: #00ade2;
+  color: #161839;
+  padding: 10px 20px;
+  /* border: none; */
+  border-radius: 18px; /* Add border-radius for rounded edges */
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  border: 2px solid rgba(4, 111, 169, 0.187);
 }
 
 #extend-button:hover {
-  transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
+  transform: scale(
+    1.1
+  ); /* This will make the button scale up to 110% of its original size */
   transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
 }
 /*style only when you press the breathe button*/
 #extend-button:active {
-  transform: scale(.9); /* This will make the button scale up to 110% of its original size */
+  transform: scale(
+    0.9
+  ); /* This will make the button scale up to 110% of its original size */
   transition: transform 0.3s;
 }
 /* Style the main content area */
 main {
-    padding: 0px;
+  padding: 0px;
 }
 /* Style the meditation, breathe, and ambient sound */
-.breathe-btn, .meditation, .ambient-sound {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    border: none;
-    background-color: transparent;
-    text-align: center;
-    flex-direction: column; /* Stack text below the image */
-    align-items: center; /* Center align text and image horizontally */
-    transition: transform 0.3s;
-    position: relative;
-  }
-  
-  .breathe-img, .meditation-img, .ambient-img {
-    width: 158px; /* Adjust the width as needed */
-    height: 158px; /* Adjust the height as needed */
-    display: block;
-    margin: 0 auto; /* Center image horizontally */
-    opacity: .8;
-  }
-  
-  /*style breathe, meditation and ambient text*/
-  .breathe-txt,
-  .meditation-txt,
-  .ambient-txt {
-    display: block;
-    margin-top: 5px;
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
-  }
-  
-  /*style play button*/
-  .play-btn {
-    position: absolute;
-    top: 75%; /* Center the button vertically */
-    left: 50%; /* Center the button horizontally */
-    transform: translate(-50%, -50%); /* Ensures the button is perfectly centered, not top-left aligned to the center */
-    background: transparent; /* Assuming you want no background for the button */
-    border: none; /* Removes border */
-    cursor: pointer;
-  }
-  /*style play button img*/
-  .play-img {
-    border-radius: 30px;
-    top: 100px;
-  }
+.breathe-btn,
+.meditation,
+.ambient-sound {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  flex-direction: column; /* Stack text below the image */
+  align-items: center; /* Center align text and image horizontally */
+  transition: transform 0.3s;
+  position: relative;
+}
 
-  /*styling only when hovering over play button */
-  .play-btn:hover {
-    transform: translate(-50%, -50%) scale(1.1); 
-    transition: transform 0.3s ease-in-out;
-  }
-  /*styling only when pressing the play button*/
-  .play-btn:active {
-    transform: translate(-50%, -50%) scale(.8); /*scale down*/
-    transition: transform 0.3s ease-in-out;
-  }
-  /* styles only specific to the breathe button*/
-  .breathe-btn {
-    cursor: pointer;
-  }
-  /*styling only when hovering over breathe button */
-  .breathe-btn:hover {
-    transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
-    transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
-  }
-  
-  /*style only when you press the breathe button*/
-  .breathe-btn:active {
-    transform: scale(.9); /* This will make the button scale up to 110% of its original size */
-    transition: transform 0.3s;
-  }
-  
-  /* Style the video element */
-  video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+.breathe-img,
+.meditation-img,
+.ambient-img {
+  width: 158px; /* Adjust the width as needed */
+  height: 158px; /* Adjust the height as needed */
+  display: block;
+  margin: 0 auto; /* Center image horizontally */
+  opacity: 0.8;
+  border: 5px solid rgba(28, 167, 232, 0.634);
+  border-radius: 45px;
+}
+
+/*style breathe, meditation and ambient text*/
+.breathe-txt,
+.meditation-txt,
+.ambient-txt {
+  display: block;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+}
+
+/*style play button*/
+.play-btn {
+  position: absolute;
+  top: 73%; /* Center the button vertically */
+  left: 50%; /* Center the button horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ensures the button is perfectly centered, not top-left aligned to the center */
+  background: transparent; /* Assuming you want no background for the button */
+  border: none; /* Removes border */
+  cursor: pointer;
+}
+/*style play button img*/
+.play-img {
+  border-radius: 30px;
+  top: 100px;
+  width: 32px;
+  height: 32px;
+}
+
+/*styling only when hovering over play button */
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+/*styling only when pressing the play button*/
+.play-btn:active {
+  transform: translate(-50%, -50%) scale(0.8); /*scale down*/
+  transition: transform 0.3s ease-in-out;
+}
+/* styles only specific to the breathe button*/
+.breathe-btn {
+  cursor: pointer;
+}
+/*styling only when hovering over breathe button */
+.breathe-btn:hover {
+  transform: scale(
+    1.1
+  ); /* This will make the button scale up to 110% of its original size */
+  transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
+}
+
+/*style only when you press the breathe button*/
+.breathe-btn:active {
+  transform: scale(
+    0.9
+  ); /* This will make the button scale up to 110% of its original size */
+  transition: transform 0.3s;
+}
+
+/* Style the video element */
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Style the footer with a background color, text color, and padding */
 footer {
-    color: #fff;
-    padding: 10px;
-    text-align:left;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+/*ADJUST MEDITATION TIMER; ARROWS AND MINUTES/SECONDS*/
+.timer-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /*adjust space between arrows and timer*/
+}
+.arrow-up,
+.arrow-down {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #0076bfeb;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* left ^ up arrow*/
+.arrow-up.left-arrow {
+  left: -20px; /* adjusted position for consistency */
+  top: calc(50% + 12px); /* adjusted positioning */
+}
+
+/* left v down arrow */
+.arrow-down.left-arrow {
+  left: -20px; /* adjusted position for consistency */
+  top: calc(50% + 30px); /* adjusted positioning */
+}
+
+/* right ^ up arrow*/
+.arrow-up.right-arrow {
+  left: 55px; /* adjusted position for consistency */
+  top: calc(50% + 12px); /* adjusted positioning */
+}
+
+/* right v down arrow*/
+.arrow-down.right-arrow {
+  left: 55px; /* adjusted position for consistency */
+  top: calc(50% + 30px); /* adjusted positioning */
+}
+
+.time-display {
+  font-family: "Nunito", sans-serif; /* Use Roboto font; fallback to any sans-serif font */
+  font-size: 18px;
+  color: rgba(235, 232, 232, 0.829);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  left: 11px;
+  top: 73px;
+}
+
+.arrow-up.left-arrow:active,
+.arrow-down.left-arrow:active,
+.arrow-up.right-arrow:active,
+.arrow-down.right-arrow:active {
+  transform: scale(
+    0.9
+  ); /* This will make the button scale up to 110% of its original size */
+  transition: transform 0.3s;
+  color: rgba(235, 232, 232, 0.829);
+}
+
+.ready-btn {
+  margin-top: 91px;
+  background-color: #00ade200;
+  font-family: "Nunito", sans-serif;
+  border: none;
+  color: rgb(235, 232, 232);
+  border-radius: 18px;
+  padding: 5px 15px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.ready-btn:hover {
+  color: #0076bfeb;
+  font-weight: bold;
+}
+
+.ready-btn:active {
+  transform: scale(
+    0.9
+  ); /* This will make the button scale up to 110% of its original size */
+  transition: transform 0.3s;
 }
