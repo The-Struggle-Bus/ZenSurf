@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=2.0" />
     <title>ZenSurf</title>
     <link rel="stylesheet" href="popup.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="popup-container">
       <header>
-        <img class ="icon" src="images/Z.png" />
+        <img class="icon" src="images/newZ.png" />
       </header>
       <a>
         <button id="extend-button">Extend</button>
@@ -22,23 +25,59 @@
     <main>
       <div class="features-container">
         <!-- Popup content -->
+        <!--Breathe Button-->
         <button class="breathe-btn">
-          <img class = "breathe-img" src="images/Breathe.png" />
+          <img class="breathe-img" src="images/Breathe.png" />
           <span class="breathe-txt">Breathe</span>
         </button>
-        <div class = "meditation">
-          <img class = "meditation-img" src="images/Meditation.png"/>
+        <!--Meditation Timer-->
+        <div class="meditation">
+          <img class="meditation-img" src="images/Meditation.png" />
+          <div class="timer-container">
+            <!-- <div class="timer"> -->
+            <button
+              class="arrow-up left-arrow"
+              onclick="adjustTime('minutes', 'increase')"
+            >
+              ▲
+            </button>
+            <div class="time-display" id= ="timerClickable">
+              <span id="minutes-display">00</span>:
+              <span id="seconds-display">00</span>
+            </div>
+
+            <button
+              class="arrow-up right-arrow"
+              onclick="adjustTime('seconds', 'increase')"
+            >
+              ▲
+            </button>
+            <button
+              class="arrow-down left-arrow"
+              onclick="adjustTime('minutes', 'decrease')"
+            >
+              ▼
+            </button>
+            <button
+              class="arrow-down right-arrow"
+              onclick="adjustTime('seconds', 'decrease')"
+            >
+              ▼
+            </button>
+            <!-- </div> -->
+          </div>
+
           <span class="meditation-txt">Meditation</span>
         </div>
+        <!--Ambient Sounds-->
         <div class="ambient-sound">
-          <img class = "ambient-img" src="images/Ambient.png" />
-          <button class = "play-btn">
-            <img class =  "play-img" src = "images/Play.png" id="playPauseIcon">
+          <img class="ambient-img" src="images/Ambient.png" />
+          <button class="play-btn">
+            <img class="play-img" src="images/Play.png" id="playPauseIcon" />
           </button>
           <span class="ambient-txt">Ambient Sound</span>
         </div>
       </div>
-
 
       <div id="exercise-content">
         <!-- The content of the selected exercise will be displayed here -->
