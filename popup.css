@@ -1,18 +1,12 @@
 /* Reset default margin and padding */
 body {
   margin: 0;
-  width: 646px;
+  width: 648px;
   padding: 0px;
-
   background-image: url("https://usagif.com/wp-content/uploads/gifs/water-99.gif");
   background-size: cover; /* This will ensure the gif covers the entire viewport */
   background-repeat: no-repeat; /* To avoid the gif from repeating */
   background-position: center center; /* To center the gif */
-}
-
-/* Set a background color for the popup */
-body {
-  background-color: #acdeed;
 }
 
 /* Style the header image */
@@ -38,14 +32,16 @@ header img {
 }
 .features-container {
   margin-top: 20px;
+  padding: 5px;
 }
+
 /* Style the "Extend" button */
 #extend-button {
   width: fit-content;
   background-color: #00ade2;
   color: #161839;
   padding: 10px 20px;
-  /* border: none; */
+  border: none;
   border-radius: 18px; /* Add border-radius for rounded edges */
   cursor: pointer;
   font-size: 13px;
@@ -53,41 +49,35 @@ header img {
   font-family: "Nunito", sans-serif;
   margin-bottom: 10px;
   margin-right: 5px;
-  border: 2px solid rgba(4, 111, 169, 0.187);
 }
-
 #extend-button:hover {
-  transform: scale(
-    1.1
-  ); /* This will make the button scale up to 110% of its original size */
+  transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
   transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
 }
-/*style only when you press the breathe button*/
+/*style only when you press the extend button*/
 #extend-button:active {
-  transform: scale(
-    0.9
-  ); /* This will make the button scale up to 110% of its original size */
+  transform: scale(0.9); /* This will make the button scale down to 90% of its original size */
   transition: transform 0.3s;
 }
+
 /* Style the main content area */
 main {
   padding: 0px;
 }
+
 /* Style the meditation, breathe, and ambient sound */
-.breathe-btn,
+.breathe,
 .meditation,
 .ambient-sound {
   display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  border: none;
+  margin: 0 20px 10px;
   background-color: transparent;
   text-align: center;
   flex-direction: column; /* Stack text below the image */
   align-items: center; /* Center align text and image horizontally */
   transition: transform 0.3s;
   position: relative;
+  cursor: pointer;
 }
 
 .breathe-img,
@@ -111,6 +101,43 @@ main {
   font-size: 15px;
   font-family: "Nunito", sans-serif;
   color: #fff;
+}
+
+/* Style the video */
+.breathe-video {
+  width: 158px;
+  height: 158px;
+  display: none;
+  position: absolute;
+  object-fit: cover;
+  border: 5px solid rgba(28, 167, 232, 0.634);
+  border-radius: 45px;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s; /* Added transform transition */
+  transform: scale(1); /* Initial scale */
+}
+
+/* Show the video and hide the image when the "Breathe" button is hovered */
+.breathe:hover .breathe-video {
+  display: block;
+  opacity: 0.8;
+  transform: scale(1.05); 
+}
+
+.breathe:hover .breathe-img {
+  opacity: 0;
+}
+
+.breathe-overlay {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
 }
 
 /*style play button*/
@@ -144,32 +171,6 @@ main {
   transform: translate(-50%, -50%) scale(0.8); /*scale down*/
   transition: transform 0.3s ease-in-out;
 }
-/* styles only specific to the breathe button*/
-.breathe-btn {
-  cursor: pointer;
-}
-/*styling only when hovering over breathe button */
-.breathe-btn:hover {
-  transform: scale(
-    1.1
-  ); /* This will make the button scale up to 110% of its original size */
-  transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
-}
-
-/*style only when you press the breathe button*/
-.breathe-btn:active {
-  transform: scale(
-    0.9
-  ); /* This will make the button scale up to 110% of its original size */
-  transition: transform 0.3s;
-}
-
-/* Style the video element */
-video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 /* Style the footer with a background color, text color, and padding */
 footer {
@@ -189,6 +190,7 @@ footer {
   align-items: center;
   gap: 5px; /*adjust space between arrows and timer*/
 }
+
 .arrow-up,
 .arrow-down {
   background: transparent;
