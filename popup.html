@@ -15,7 +15,7 @@
   <body>
     <div class="popup-container">
       <header>
-        <img class="icon" src="images/newZ.png" />
+        <img class="icon" src="images/ShadowZ.png" />
       </header>
       <a>
         <button id="extend-button">Extend</button>
@@ -25,18 +25,32 @@
     <main>
       <div class="features-container">
         <!-- Popup content -->
+
         <!--Breathe Button-->
-        <button class="breathe-btn">
+        <div class="breathe">
           <img class="breathe-img" src="images/Breathe.png" />
           <span class="breathe-txt">Breathe</span>
-        </button>
+          <video
+            class="breathe-video"
+            src="videos/BreatheVideo.mp4"
+            autoplay
+            loop
+            alt="Inhale, Exhale"
+          ></video>
+          <div class="breathe-overlay"></div>
+        </div>
+
         <!--Meditation Timer-->
         <div class="meditation">
           <img class="meditation-img" src="images/Meditation.png" />
           <div class="timer-container">
             <!-- <div class="timer"> -->
-
-            <button class="arrow-up left-arrow">▲</button>
+            <button
+              class="arrow-up left-arrow"
+              onclick="adjustTime('minutes', 'increase')"
+            >
+              ▲
+            </button>
             <div class="time-display" id="timerClickable">
               <span id="minutes-display">00</span>:
               <span id="seconds-display">00</span>
