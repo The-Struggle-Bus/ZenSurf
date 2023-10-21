@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get the "Extend" button element
   const extendButton = document.getElementById("extend-button");
 
-  // Get the video element
-  // const breatheVideo = document.getElementById('breathe-video');
-
   // Get the ambient sound element
   const ambientSound = document.getElementById("ambientSound");
 
@@ -138,4 +135,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".arrow-down.right-arrow")
     .addEventListener("click", () => adjustTime("seconds", "decrease"));
+});
+
+// Add event listeners to the "Breathe" container
+const breatheContainer = document.querySelector(".breathe");
+
+const video = document.querySelector(".breathe-video");
+
+breatheContainer.addEventListener("mouseenter", () => {
+  video.play();
+});
+
+breatheContainer.addEventListener("mouseleave", () => {
+  video.pause();
+  video.currentTime = 0;
 });

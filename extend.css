@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #acdeed;
+    background-image: url(images/ExtendBG.png);
+    background-size: 100vmax;
 }
 
 /* Style the header image and customize button */
