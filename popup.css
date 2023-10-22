@@ -54,10 +54,16 @@ header img {
   transform: scale(
     1.1
   ); /* This will make the button scale up to 110% of its original size */
+  transform: scale(
+    1.1
+  ); /* This will make the button scale up to 110% of its original size */
   transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
 }
 /*style only when you press the extend button*/
 #extend-button:active {
+  transform: scale(
+    0.9
+  ); /* This will make the button scale down to 90% of its original size */
   transform: scale(
     0.9
   ); /* This will make the button scale down to 90% of its original size */
