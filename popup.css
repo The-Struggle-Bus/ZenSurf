@@ -231,7 +231,9 @@ footer {
 
 .time-display {
   font-family: "Nunito", sans-serif; /* Use Roboto font; fallback to any sans-serif font */
+
   font-size: 17px;
+
   color: rgba(235, 232, 232, 0.829);
   font-weight: bold;
   display: flex;
