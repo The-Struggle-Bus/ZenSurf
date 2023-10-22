@@ -51,12 +51,16 @@ header img {
   margin-right: 5px;
 }
 #extend-button:hover {
-  transform: scale(1.1); /* This will make the button scale up to 110% of its original size */
+  transform: scale(
+    1.1
+  ); /* This will make the button scale up to 110% of its original size */
   transition: transform 0.3s ease-in-out; /* This provides a smooth transition effect */
 }
 /*style only when you press the extend button*/
 #extend-button:active {
-  transform: scale(0.9); /* This will make the button scale down to 90% of its original size */
+  transform: scale(
+    0.9
+  ); /* This will make the button scale down to 90% of its original size */
   transition: transform 0.3s;
 }
 
@@ -123,7 +127,7 @@ main {
 .breathe:hover .breathe-video {
   display: block;
   opacity: 0.8;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .breathe:hover .breathe-img {
@@ -230,8 +234,6 @@ footer {
 
   font-size: 17px;
 
-
-
   color: rgba(235, 232, 232, 0.829);
   font-weight: bold;
   display: flex;
@@ -240,9 +242,6 @@ footer {
   position: absolute;
   left: 11px;
   top: 75px;
-
-
-
 }
 
 .arrow-up.left-arrow:active,
@@ -262,11 +261,9 @@ footer {
   font-family: "Nunito", sans-serif;
   border: none;
 
-
   color: rgb(235, 232, 232);
   border-radius: 18px;
   padding: 5px 15px;
-
 
   cursor: pointer;
   background: transparent;
