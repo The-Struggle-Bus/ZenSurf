@@ -52,7 +52,6 @@ main {
   gap: 90px;
   margin: 10px;
   border: none;
-  cursor: pointer;
   text-align: center;
   flex-direction: column; /* Stack text below the image */
   transition: transform 0.3s;
