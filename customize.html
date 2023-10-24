@@ -17,18 +17,62 @@
     <main>
       <div class="container">
         <h3>Current Default</h3>
-        <div class="left-container" id="left">
-          <div class="list" draggable="true">
-            <img src="images/move-breathe.png" />
-          </div>
-          <div class="list" draggable="true">
-            <img src="images/move-ambient.png" />
-          </div>
-          <div class="list" draggable="true">
-            <img src="images/move-meditation.png" />
-          </div>
+        <div
+          class="left-container"
+          id="left"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <img
+            src="images/move-breathe.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag1"
+          />
+          <img
+            src="images/move-ambient.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag2"
+          />
+          <img
+            src="images/move-meditation.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag3"
+          />
         </div>
-        <div id="right"></div>
+        <div
+          class="right-container"
+          id="right"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <img
+            src="images/move-visual.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag4"
+          />
+          <img
+            src="images/move-podcast.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag5"
+          />
+          <img
+            src="images/move-movement.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag6"
+          />
+          <img
+            src="images/move-quote.png"
+            draggable="true"
+            ondragstart="drag(event)"
+            id="drag7"
+          />
+        </div>
       </div>
       <button id="reset-button">Reset</button>
       <button id="save-button">Save</button>

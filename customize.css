@@ -61,21 +61,36 @@ h3 {
     color: #5d5d5d;
     margin: 0;
     top: 115px;
-    left: -225px;
+    left: calc(50% - 530px);
     position: absolute;
-    width: 100%;
+    width: 300px;
+    z-index: 1;
   }
 
 .container{
-    width: 100%;
+    width: auto;
     max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.left-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Adjust the gap between grid items */
+  justify-items: center;
+}
+
+.right-container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* Adjust the number of columns as needed */
+  gap: 10px; /* Adjust the gap between grid items */
+  justify-items: center;
+}
+
 #left, #right{
-    width: 300px; 
+    width: 500px; 
     min-height: 450px;
     margin: 20px; 
     background-color: rgba(206, 224, 230, 0.68);
@@ -85,7 +100,7 @@ h3 {
   border: 2px dashed #00b7ff;
 }
 
-.list{
+/* .list{
     background: transparent;
     height: 100px;
     margin: 30px;
@@ -101,7 +116,7 @@ h3 {
     margin-left: 65px;
     align-items: center;
     justify-content: center;
-}
+} */
 
 /* Style the “reset” button */
 #reset-button {
