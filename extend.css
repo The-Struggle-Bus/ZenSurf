@@ -106,7 +106,7 @@ main {
   opacity: 0.3;
   background-color: transparent;
   color: #fff;
-  /* border: none; */
+  border: none;
   cursor: pointer;
   font-size: 24px;
   font-weight: bold;

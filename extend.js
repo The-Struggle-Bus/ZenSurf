@@ -12,26 +12,26 @@ function plusSlidesVisual(n) {
     slideIndexVisual = 5; // Loop to the last slide
   }
   showSlides("mySlidesVisual", slideIndexVisual);
-  }
+}
 
 // Navigate to next or previous slide for Movements
 function plusSlidesMovement(n) {
   slideIndexMovement += n;
   if (slideIndexMovement > 4) {
-     slideIndexMovement = 1; // Loop back to the first slide
+    slideIndexMovement = 1; // Loop back to the first slide
   }
   if (slideIndexMovement < 1) {
     slideIndexMovement = 4; // Loop to the last slide
   }
   showSlides("mySlidesMovement", slideIndexMovement);
-  }
+}
 
 // Show a specific slide
 function showSlides(slideshowId, slideIndex) {
   let slides = document.getElementsByClassName(slideshowId);
 
   for (let i = 0; i < slides.length; i++) {
-    lides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   slides[slideIndex - 1].style.display = "block";
 }
