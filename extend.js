@@ -1,3 +1,10 @@
+
+// Find the button element by its id
+const prevVisualButton = document.getElementById("prevVisualButton");
+const nextVisualButton = document.getElementById("nextVisualButton");
+const prevMovementButton = document.getElementById("prevMovementButton");
+const nextMovementButton = document.getElementById("nextMovementButton");
+
 // script for slideshow of visuals and movement
 let slideIndexVisual = 1;
 let slideIndexMovement = 1;
@@ -41,6 +48,24 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlides("mySlidesVisual", slideIndexVisual);
   showSlides("mySlidesMovement", slideIndexMovement);
 });
+
+// Add an event listener to handle the click event
+prevVisualButton.addEventListener("click", function() {
+  plusSlidesVisual(-1);
+});
+
+nextVisualButton.addEventListener("click", function() {
+  plusSlidesVisual(1);
+});
+
+prevMovementButton.addEventListener("click", function() {
+  plusSlidesMovement(-1);
+});
+
+nextMovementButton.addEventListener("click", function() {
+  plusSlidesMovement(1);
+});
+
 
 // Add an event listener to the feedback button
 document
