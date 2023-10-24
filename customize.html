@@ -6,21 +6,36 @@
     <link rel="stylesheet" href="customize.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="left">
-        <div class="list" draggable="true">
-          <img src="images/Breathe.png" />
-        </div>
-        <div class="list" draggable="true">
-          <img src="images/ambient.png" />
-        </div>
-        <div class="list" draggable="true">
-          <img src="images/Meditation.png" />
-        </div>
-      </div>
-      <div id="right"></div>
+    <div class="extend-container">
+      <header>
+        <img src="images/newZ.png" />
+        <a href="extend.html">
+          <button id="return-button">Return</button>
+        </a>
+      </header>
     </div>
-
+    <main>
+      <div class="container">
+        <h3>Current Default</h3>
+        <div class="left-container" id="left">
+          <div class="list" draggable="true">
+            <img src="images/move-breathe.png" />
+          </div>
+          <div class="list" draggable="true">
+            <img src="images/move-ambient.png" />
+          </div>
+          <div class="list" draggable="true">
+            <img src="images/move-meditation.png" />
+          </div>
+        </div>
+        <div id="right"></div>
+      </div>
+      <button id="reset-button">Reset</button>
+      <button id="save-button">Save</button>
+    </main>
+    <footer>
+      <p>&copy; 2023 ZenSurf</p>
+    </footer>
     <script src="customize.js"></script>
   </body>
 </html>

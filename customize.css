@@ -1,3 +1,51 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #acdeed;
+    background-image: url(images/ExtendBG.png);
+    background-size: 100vmax;
+  }
+
+/* Style the header image and customize button */
+header {
+    display: flex;
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center;
+    padding: 10px; /* Add padding to the header */
+  }
+  
+  /* Style the header image */
+  header img {
+    width: 108px;
+    height: 108px;
+  }
+  
+  /* Style the “return” button */
+  #return-button {
+    width: fit-content;
+    background-color: #00ade2;
+    color: #000;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px; /* Add border-radius for rounded edges */
+    cursor: pointer;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+    font-size: 17px;
+  }
+  
+  /* Style the main content area */
+  main {
+    padding: 0px;
+    flex-grow: 1; /* Allow the main content to grow and take up remaining space */
+  }
+
 *{
     margin : 0;
     padding: 0;
@@ -5,14 +53,25 @@
     box-sizing: border-box;
 }
 
+/* Style the h3 element */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #5d5d5d;
+    margin: 0;
+    top: 115px;
+    left: -225px;
+    position: absolute;
+    width: 100%;
+  }
+
 .container{
     width: 100%;
-    min-height: 100vh;
-    background: dodgerblue;
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-     
 }
 
 #left, #right{
@@ -20,6 +79,7 @@
     min-height: 450px;
     margin: 20px; 
     border: 2px dashed #fff;
+    background-color: rgba(206, 224, 230, 0.68);
 }
 
 .list{
@@ -39,3 +99,56 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Style the “reset” button */
+#reset-button {
+    width: fit-content;
+    background-color: #00ade2;
+    color: #fff;
+    position: fixed;
+    bottom: 50px;
+    left: 350px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px; /* Add border-radius for rounded edges */
+    cursor: pointer;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+    font-size: 14px;
+  }
+  
+/* Style the “save” button */
+#save-button {
+    width: fit-content;
+    background-color: #00ade2;
+    color: #fff;
+    position: fixed;
+    bottom: 50px;
+    right: 350px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px; /* Add border-radius for rounded edges */
+    cursor: pointer;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+    font-size: 14px;
+  }
+
+/* Style the footer with a background color, text color, and padding */
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px;
+    font-family: "Nunito", sans-serif;
+    font-size: small;
+    text-align: left;
+    align-self: baseline;
+  }
+
+  /* Add a hover effect to the buttons */
+button:hover {
+    background-color: transparent;
+    transform: scale(1.1);
+  }
