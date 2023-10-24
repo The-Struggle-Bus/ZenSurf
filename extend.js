@@ -1,4 +1,4 @@
-
+// ------------------------------Visual and Movement ----------------------------
 // Find the button element by its id
 const prevVisualButton = document.getElementById("prevVisualButton");
 const nextVisualButton = document.getElementById("nextVisualButton");
@@ -67,6 +67,62 @@ nextMovementButton.addEventListener("click", function() {
 });
 
 
+// --------------------------------Quote-------------------------------------
+// Array of quote image sources
+const quoteImages = [
+  'quote1.png',
+  'quote2.png',
+  'quote3.png',
+  'quote4.png',
+  'quote5.png',
+  'quote6.png',
+  'quote7.png',
+  'quote8.png',
+  'quote9.png',
+  'quote10.png',
+  'quote11.png',
+  'quote12.png'
+];
+
+// Get the button element by its id
+const quoteButton = document.getElementById("quoteButton");
+// Handle the click event here, change the quote image
+const quoteImage = document.getElementById("quoteImage");
+// Get the current date
+const currentDate = new Date().toDateString();
+
+// Get One Quote
+function SelectDailyQuote() {
+  // Check if a quote has been selected today
+  const selectedDate = localStorage.getItem("selectedDate");
+
+  if (selectedDate === currentDate) {
+      // A quote has already been selected today, display it
+      quoteImage.src = "images/" + localStorage.getItem("selectedQuote");
+  } else {
+      // It's a new day, select and display a new quote
+      const randomImageNumber = Math.floor(Math.random() * quoteImages.length);
+      const selectedQuote = quoteImages[randomImageNumber];
+      quoteImage.src = "images/" + selectedQuote;
+
+      // Store the selected quote and date in local storage
+      localStorage.setItem("selectedQuote", selectedQuote);
+      localStorage.setItem("selectedDate", currentDate);
+  }
+
+  // Disable the button once a quote is displayed
+  quoteButton.disabled = true;
+  // Change the cursor style
+  quoteButton.style.cursor = "not-allowed";
+}
+
+// Add a click event listener
+quoteButton.addEventListener("click", function() {
+  SelectDailyQuote();
+});
+
+
+// ---------------------------------Feedback-----------------------------------
 // Add an event listener to the feedback button
 document
   .getElementById("feedback")

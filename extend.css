@@ -57,7 +57,7 @@ main {
   transition: transform 0.3s;
 }
 
-/* Style for the visual button */
+/* Style for the visual, movement, and podcast */
 .visual-container,
 .movement-container,
 .podcast-container,
@@ -151,15 +151,33 @@ main {
   transform: scale(1.2);
 }
 
+/* Style the quote cover button */
+#quoteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the cover image */
+#quoteImage {
+  width: auto;
+  height: auto;
+}
+
+/* Style the container for the quote image */
+.Quote-image {
+  display: none; /* Hide the quote image by default */
+}
+
 /* Style the footer with a background color, text color, and padding */
 footer {
   position: fixed;
   bottom: 0px;
-  left: 5px;
+  left: 15px;
   display: flex;
   justify-content: space-between;
   color: #fff;
-  padding: 10px;
+  padding: 0px;
   font-family: "Nunito", sans-serif;
   font-size: small;
   text-align: left;
