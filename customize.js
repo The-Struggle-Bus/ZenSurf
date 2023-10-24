@@ -1,28 +1,26 @@
-let lists = document.getElementsByClassName("list");
-let rightBox = document.getElementById("right");
-let leftBox = document.getElementById("left");
+const lists = document.getElementsByClassName("list");
+const rightBox = document.getElementById("right");
+const leftBox = document.getElementById("left");
 let selected;
 
-for (list of lists) {
+// Add dragstart event listeners to each list item
+for (const list of lists) {
+  list.setAttribute("draggable", true);
+
   list.addEventListener("dragstart", function (e) {
     selected = e.target;
-
-    rightBox.addEventListener("dragover", function (e) {
-      e.preventDefault();
-    });
-    rightBox.addEventListener("drop", function (e) {
-      e.preventDefault();
-      rightBox.appendChild(selected);
-      selected = null;
-    });
-
-    leftBox.addEventListener("dragover", function (e) {
-      e.preventDefault();
-    });
-    leftBox.addEventListener("drop", function (e) {
-      e.preventDefault();
-      leftBox.appendChild(selected);
-      selected = null;
-    });
   });
 }
+
+// Add dragover and drop event listeners for both containers
+[leftBox, rightBox].forEach((container) => {
+  container.addEventListener("dragover", function (e) {
+    e.preventDefault();
+  });
+
+  container.addEventListener("drop", function (e) {
+    e.preventDefault();
+    container.appendChild(selected);
+    selected = null;
+  });
+});

@@ -78,8 +78,11 @@ h3 {
     width: 300px; 
     min-height: 450px;
     margin: 20px; 
-    border: 2px dashed #00b7ff;
     background-color: rgba(206, 224, 230, 0.68);
+}
+
+#left {
+  border: 2px dashed #00b7ff;
 }
 
 .list{
