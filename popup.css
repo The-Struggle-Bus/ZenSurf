@@ -89,6 +89,7 @@ main {
   position: relative;
 }
 .breathe {
+  cursor: pointer;
 }
 
 .breathe {
