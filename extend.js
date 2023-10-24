@@ -1,3 +1,4 @@
+
 // Find the button element by its id
 const prevVisualButton = document.getElementById("prevVisualButton");
 const nextVisualButton = document.getElementById("nextVisualButton");
