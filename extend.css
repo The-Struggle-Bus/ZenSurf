@@ -1,15 +1,14 @@
 /* Reset default margin and padding */
 body {
-    margin: 0;
-    width: 100%;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    background-color: #acdeed;
-    background-image: url(images/ExtendBG.png);
-    background-size: 100vmax;
+  margin: 0;
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #acdeed;
+  background-image: url(images/ExtendBG.png);
+  background-size: 100vmax;
 }
-
 /* Style the header image and customize button */
 header {
   display: flex;
@@ -20,128 +19,135 @@ header {
 
 /* Style the header image */
 header img {
-    width: 108px;
-    height: 108px;
+  width: 108px;
+  height: 108px;
 }
 
 /* Style the “customize” button */
 #customize-button {
-    width: fit-content;
-    background-color: #00ade2;
-    color: #000;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px; /* Add border-radius for rounded edges */
-    cursor: pointer;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    font-size: 17px;
+  width: fit-content;
+  background-color: #00ade2;
+  color: #000;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px; /* Add border-radius for rounded edges */
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-size: 17px;
 }
 
 /* Style the main content area */
 main {
-    padding: 0px;
-    flex-grow: 1; /* Allow the main content to grow and take up remaining space */
+  padding: 0px;
+  flex-grow: 1; /* Allow the main content to grow and take up remaining space */
 }
 
 /* Style the option buttons */
-.button-container {
-    display: grid;
-    grid-template-columns: repeat(2,1fr); /* 2x2 grid */
-    gap: 60px;
-    margin: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    text-align: center;
-    flex-direction: column; /* Stack text below the image */
-    transition: transform 0.3s;
-}
-  
-  .activity-btn {
-    width: 100%; /* Adjust the width as needed */
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-
-  .activity-btn img {
-    width: 188px; /* Adjust the width as needed */
-    height: 188px; /* Adjust the height as needed */
-    display: block;
-    margin: 0 auto; /* Center image horizontally */
-}
-  
-  .activity-btn .quote-txt,
-  .activity-btn .visual-txt,
-  .activity-btn .podcast-txt,
-  .activity-btn .movement-txt {
-    display: block;
-    margin-top: 5px;
-    font-size: 17px;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    color: #fff;
-  }
-  
-  /* Style the quote containers */
-  .quote-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  /* Style the visual containers */
-  .visual-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  /* Style the podcast containers */
-  .podcast-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  /* Style the movement containers */
-  .movement-container {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-
-/* Style the "Play" button for the audio */
-#play-sound-button {
-  background-color: #28a745;
-  color: #fff;
-  padding: 10px 20px;
+.option-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  gap: 90px;
+  margin: 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  text-align: center;
+  flex-direction: column; /* Stack text below the image */
+  transition: transform 0.3s;
+}
+
+/* Style for the visual button */
+.visual-container,
+.movement-container,
+.podcast-container,
+.quote-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 228px;
+  height: 188px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.visual-txt,
+.movement-txt,
+.podcast-txt,
+.quote-txt {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 17px;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  color: #fff;
+}
+/* Style the Previous and Next buttons */
+.prevVisual,
+.nextVisual,
+.prevMovement,
+.nextMovement {
+  opacity: 0.3;
+  background-color: transparent;
+  color: #fff;
+  /* border: none; */
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  border-radius: 50px;
+  transition: 0.1s ease;
+  transform: translateY(-50%);
+  user-select: auto;
+}
+/* Position the "next button" to the right */
+.prevVisual,
+.prevMovement {
+  left: 0;
+}
+/* Position the "next button" to the right */
+.nextVisual,
+.nextMovement {
+  right: 0;
+}
+/* Style the buttons on hover */
+.prev:hover,
+.next:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* On hover, add a grey background color with a little bit see-through */
 }
 
 /* Style the footer with a background color, text color, and padding */
 footer {
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-    padding: 10px;
-    text-align: left;
-    align-self: baseline;
+  position: fixed;
+  bottom: 0px;
+  left: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 10px;
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  text-align: left;
+  align-self: baseline;
 }
 
 #feedback {
@@ -156,7 +162,7 @@ footer {
   margin: 10px;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
   cursor: pointer;
 }
 
@@ -195,12 +201,12 @@ footer {
 #feedbackForm input[type="email"],
 #feedbackForm input[type="text"],
 #feedbackForm textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 #feedbackForm textarea {
@@ -209,25 +215,25 @@ footer {
 
 #feedbackForm input[type="submit"],
 #feedbackForm button {
-    background-color: #00ade2;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
+  background-color: #00ade2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #feedbackForm input[type="submit"]:hover,
 #feedbackForm button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+  background-color: #0056b3;
+  transform: scale(1.1);
 }
 
 /* Add a hover effect to the buttons */
 button:hover {
-    background-color: transparent;
-    transform: scale(1.1);
+  background-color: transparent;
+  transform: scale(1.1);
 }

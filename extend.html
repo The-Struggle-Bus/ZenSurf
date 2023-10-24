@@ -17,51 +17,71 @@
       </header>
     </div>
     <main>
-      <div class="button-container">
-        <!-- Extension's content -->
-
-        <button class="activity-btn quote" id="quote-button">
-          <img src="images/Quote.png" alt="Quote" />
-          <span class="quote-txt">Quotes</span>
-        </button>
-        <button class="activity-btn visual" id="visual-button">
-          <img src="images/Visual.png" alt="Visual" />
-          <span class="visual-txt">Visuals</span>
-        </button>
-        <button class="activity-btn podcast" id="podcast-button">
-          <img src="images/Podcast.png" alt="Podcast" />
-          <span class="podcast-txt">Podcast</span>
-        </button>
-        <button class="activity-btn movement" id="movement-button">
-          <img src="images/Movement.png" alt="Movement" />
-          <span class="movement-txt">Movements</span>
-        </button>
-      </div>
-
-      <div id="option-content">
-        <!-- The content of the selected option will be displayed here -->
-        <!-- Quote option -->
-        <div class="quote-container">
-          <img src="images/Quote_1.png" alt="DailyQuote_1" />
-          Your browser does not support the image
-        </div>
-        <!-- Visual Option-->
+      <div class="option-container">
         <div class="visual-container">
-          <img src="images/Visual_1.png" alt="Visual_1" />
-          Your browser does not support the image
+          <button class="prevVisual" onclick="plusSlidesVisual(-1)">
+            &#10094;
+          </button>
+          <img
+            class="mySlidesVisual"
+            src="images/visual_1.png"
+            alt="Visual"
+            id="visual-image-1"
+          />
+          <img
+            class="mySlidesVisual fade"
+            id="visual-image-2"
+            src="images/visual_2.png"
+          />
+          <img
+            class="mySlidesVisual fade"
+            id="visual-image-3"
+            src="images/visual_3.png"
+          />
+          <img
+            class="mySlidesVisual fade"
+            id="visual-image-4"
+            src="images/visual_4.png"
+          />
+          <img
+            class="mySlidesVisual fade"
+            id="visual-image-5"
+            src="images/visual_5.png"
+          />
+          <span class="visual-txt">Visuals</span>
+          <button class="nextVisual" onclick="plusSlidesVisual(1)">
+            &#10095;
+          </button>
         </div>
-        <!-- Podcast Option-->
-        <div class="podcast-container">
-          <audio id="podcast-audio">
-            <source src="empty" type="audio/mpeg" />
-            Your browser does not support the audio
-          </audio>
-          <button id="play-sound-button">Play</button>
-        </div>
-        <!-- Movement Option-->
         <div class="movement-container">
-          <img src="images/Movement_1.png" alt="Movement_1" />
-          Your browser does not support the image
+          <button class="prevMovement" onclick="plusSlidesMovement(-1)">
+            &#10094;
+          </button>
+          <img
+            class="mySlidesMovement"
+            src="images/movement_1.png"
+            alt="Movement"
+            id="movement-image-1"
+          />
+          <img
+            class="mySlidesMovement fade"
+            id="movement-image-2"
+            src="images/movement_2.png"
+          />
+          <img
+            class="mySlidesMovement fade"
+            id="movement-image-3"
+            src="images/movement_3.png"
+          />
+          <img
+            class="mySlidesMovement fade"
+            id="movement-image-4"
+            src="images/movement_4.png"
+          />
+          <span class="movement-txt">Movements</span>
+          <button class="nextMovement" onclick="plusSlidesMovement(1)">
+            &#10095;
+          </button>
         </div>
       </div>
     </main>
@@ -88,7 +108,6 @@
       </form>
     </div>
 
-    <!-- Include your JavaScript file for functionality -->
     <script src="extend.js"></script>
   </body>
 </html>
