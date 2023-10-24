@@ -87,6 +87,9 @@ main {
   align-items: center; /* Center align text and image horizontally */
   transition: transform 0.3s;
   position: relative;
+}
+
+.breathe {
   cursor: pointer;
 }
 
