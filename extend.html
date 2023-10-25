@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extend Options</title>
+    <!--Style-->
     <link rel="stylesheet" href="extend.css" />
   </head>
   <body>
@@ -17,6 +18,7 @@
     </div>
     <main>
       <div class="option-container">
+        <!--Visual options-->
         <div class="visual-container">
           <button class="prevVisual" id="prevVisualButton">&#10094;</button>
           <img
@@ -49,6 +51,7 @@
 
           <button class="nextVisual" id="nextVisualButton">&#10095;</button>
         </div>
+        <!--Movement option-->
         <div class="movement-container">
           <button class="prevMovement" id="prevMovementButton">&#10094;</button>
           <img
@@ -75,23 +78,28 @@
           <span class="movement-txt">Movements</span>
           <button class="nextMovement" id="nextMovementButton">&#10095;</button>
         </div>
+        <!--Podcast option-->
         <div class="podcast-container">
           <img src="images/Podcast.png" alt="Podcast" />
 
           <audio id="podcast-audio">
-            <source src="empty" type="audio/mpeg" />
-            Your browser does not support the audio
+            <source src="audio/podcast_audio.mp3" type="audio/mpeg" />
+            Oops! Your browser does not support the audio
           </audio>
           <button id="play-sound-button">Play</button>
           <span class="podcast-txt">Podcast</span>
         </div>
+        <!--Quote option-->
         <div class="quote-container">
-          <img src="images/Quote.png" alt="Quote" />
+          <button id="quoteButton">
+            <img src="images/Quote.png" id="quoteImage" alt="Quote" />
+          </button>
           <span class="quote-txt">Quotes</span>
         </div>
       </div>
     </main>
     <footer>
+      <!--Feedback button-->
       <button id="feedback">Feedback</button>
       <p>&copy; 2023 ZenSurf</p>
     </footer>
@@ -113,7 +121,7 @@
         <button id="cancel">Cancel</button>
       </form>
     </div>
-
+    <!--Script-->
     <script src="extend.js"></script>
   </body>
 </html>

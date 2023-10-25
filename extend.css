@@ -52,13 +52,12 @@ main {
   gap: 90px;
   margin: 10px;
   border: none;
-  cursor: pointer;
   text-align: center;
   flex-direction: column; /* Stack text below the image */
   transition: transform 0.3s;
 }
 
-/* Style for the visual button */
+/* Style for the visual, movement, and podcast */
 .visual-container,
 .movement-container,
 .podcast-container,
@@ -98,11 +97,10 @@ main {
   font-family: "Gill Sans", "Gill Sans MT", sans-serif;
   color: #fff;
 }
-/* Style the Previous and Next buttons */
+
+/* Style the Previous Visual and Next Visual buttons */
 .prevVisual,
-.nextVisual,
-.prevMovement,
-.nextMovement {
+.nextVisual {
   opacity: 0.3;
   background-color: transparent;
   color: #fff;
@@ -111,12 +109,29 @@ main {
   font-size: 24px;
   font-weight: bold;
   position: absolute;
-  top: 50%;
+  top: 40%;
   border-radius: 50px;
   transition: 0.1s ease;
-  transform: translateY(-50%);
   user-select: auto;
 }
+
+/* Style the Previous Movement and Next Movement buttons */
+.prevMovement,
+.nextMovement {
+  opacity: 0.3;
+  background-color: transparent;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  border-radius: 50px;
+  transition: 0.1s ease;
+  user-select: auto;
+}
+
 /* Position the "next button" to the right */
 .prevVisual,
 .prevMovement {
@@ -128,22 +143,41 @@ main {
   right: 0;
 }
 /* Style the buttons on hover */
-.prev:hover,
-.next:hover {
+.prevVisual:hover,
+.nextVisual:hover,
+.prevMovement:hover,
+.nextMovement:hover {
   opacity: 1;
-  background-color: rgba(255, 255, 255, 0.5);
-  /* On hover, add a grey background color with a little bit see-through */
+  transform: scale(1.2);
+}
+
+/* Style the quote cover button */
+#quoteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the cover image */
+#quoteImage {
+  width: auto;
+  height: auto;
+}
+
+/* Style the container for the quote image */
+.Quote-image {
+  display: none; /* Hide the quote image by default */
 }
 
 /* Style the footer with a background color, text color, and padding */
 footer {
   position: fixed;
   bottom: 0px;
-  left: 5px;
+  left: 15px;
   display: flex;
   justify-content: space-between;
   color: #fff;
-  padding: 10px;
+  padding: 0px;
   font-family: "Nunito", sans-serif;
   font-size: small;
   text-align: left;
