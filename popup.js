@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //help toggle between play and pause
   let isPlaying = false;
-
+  // -------------------------- Meditation Timer Settings -------------------------------------------
   // timer stuff
   let minutes = 0;
   let seconds = 0;
@@ -23,16 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // starts countdown
   function adjustTime(type, action) {
     if (type === "minutes") {
-      if (action === "increase" && minutes < 2) {
-        minutes++;
-      } else if ((action === "decrease") & (minutes > 0)) {
-        minutes--;
+      if (action === "increase") {
+        minutes = (minutes + 1) % 3; // Loop minutes between 0, 1, 2
+      } else if (action === "decrease") {
+        minutes = (minutes - 1 + 3) % 3; // Loop backwards for minutes
       }
     } else if (type === "seconds") {
-      if (action === "increase" && seconds < 59) {
-        seconds++;
-      } else if (action === "decrease" && seconds > 0) {
-        seconds--;
+      if (action === "increase") {
+        seconds = (seconds + 15) % 60; // Increase seconds by 15
+      } else if (action === "decrease") {
+        seconds = (seconds - 15 + 60) % 60; // Decrease seconds by 15, and loop backwards
       }
     }
     displayTime();
@@ -118,11 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     isPlaying = !isPlaying; // toggle the flag
   }
+  playSoundButton.addEventListener("click", toggleAmbientSound);
 
   // Add a click event listener to the "Extend" button
   extendButton.addEventListener("click", openExtendOptions);
 
-  playSoundButton.addEventListener("click", toggleAmbientSound);
   document
     .querySelector(".arrow-up.left-arrow")
     .addEventListener("click", () => adjustTime("minutes", "increase"));

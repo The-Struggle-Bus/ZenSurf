@@ -1,4 +1,3 @@
-
 // ------------------------------Visual and Movement ----------------------------
 
 // Find the button element by its id
@@ -52,38 +51,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Add an event listener to handle the click event
-prevVisualButton.addEventListener("click", function() {
+prevVisualButton.addEventListener("click", function () {
   plusSlidesVisual(-1);
 });
 
-nextVisualButton.addEventListener("click", function() {
+nextVisualButton.addEventListener("click", function () {
   plusSlidesVisual(1);
 });
 
-prevMovementButton.addEventListener("click", function() {
+prevMovementButton.addEventListener("click", function () {
   plusSlidesMovement(-1);
 });
 
-nextMovementButton.addEventListener("click", function() {
+nextMovementButton.addEventListener("click", function () {
   plusSlidesMovement(1);
 });
-
 
 // --------------------------------Quote-------------------------------------
 // Array of quote image sources
 const quoteImages = [
-  'quote1.png',
-  'quote2.png',
-  'quote3.png',
-  'quote4.png',
-  'quote5.png',
-  'quote6.png',
-  'quote7.png',
-  'quote8.png',
-  'quote9.png',
-  'quote10.png',
-  'quote11.png',
-  'quote12.png'
+  "quote1.png",
+  "quote2.png",
+  "quote3.png",
+  "quote4.png",
+  "quote5.png",
+  "quote6.png",
+  "quote7.png",
+  "quote8.png",
+  "quote9.png",
+  "quote10.png",
+  "quote11.png",
+  "quote12.png",
 ];
 
 // Get the button element by its id
@@ -99,17 +97,17 @@ function SelectDailyQuote() {
   const selectedDate = localStorage.getItem("selectedDate");
 
   if (selectedDate === currentDate) {
-      // A quote has already been selected today, display it
-      quoteImage.src = "images/" + localStorage.getItem("selectedQuote");
+    // A quote has already been selected today, display it
+    quoteImage.src = "images/" + localStorage.getItem("selectedQuote");
   } else {
-      // It's a new day, select and display a new quote
-      const randomImageNumber = Math.floor(Math.random() * quoteImages.length);
-      const selectedQuote = quoteImages[randomImageNumber];
-      quoteImage.src = "images/" + selectedQuote;
+    // It's a new day, select and display a new quote
+    const randomImageNumber = Math.floor(Math.random() * quoteImages.length);
+    const selectedQuote = quoteImages[randomImageNumber];
+    quoteImage.src = "images/" + selectedQuote;
 
-      // Store the selected quote and date in local storage
-      localStorage.setItem("selectedQuote", selectedQuote);
-      localStorage.setItem("selectedDate", currentDate);
+    // Store the selected quote and date in local storage
+    localStorage.setItem("selectedQuote", selectedQuote);
+    localStorage.setItem("selectedDate", currentDate);
   }
 
   // Disable the button once a quote is displayed
@@ -119,18 +117,36 @@ function SelectDailyQuote() {
 }
 
 // Add a click event listener
-quoteButton.addEventListener("click", function() {
+quoteButton.addEventListener("click", function () {
   SelectDailyQuote();
 });
 
+// --------------------------Podcast Play/Pause Button ------------------------
 
+const podcastSound = document.getElementById("podcastSound");
+
+// Get the "Play" button element
+const playSoundButton = document.querySelector(".play-sound-btn");
+
+const playPauseIcon = document.getElementById("playPauseIcon");
+let isPlaying = false;
+
+function togglePodcastSound() {
+  if (isPlaying) {
+    podcastSound.pause();
+    playPauseIcon.src = "images/Play.png";
+  } else {
+    podcastSound.play();
+    playPauseIcon.src = "images/Pause.png";
+  }
+  isPlaying = !isPlaying; // toggle the flag
+}
+playSoundButton.addEventListener("click", togglePodcastSound);
 // ---------------------------------Feedback-----------------------------------
 // Add an event listener to the feedback button
-document
-  .getElementById("feedback")
-  .addEventListener("click", function () {
-    toggleFeedbackPopup();
-  });
+document.getElementById("feedback").addEventListener("click", function () {
+  toggleFeedbackPopup();
+});
 
 document.getElementById("cancel").addEventListener("click", function () {
   toggleFeedbackPopup();
