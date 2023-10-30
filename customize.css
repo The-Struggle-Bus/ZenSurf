@@ -6,11 +6,11 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #acdeed;
-  background-image: url(images/ExtendBG.png);
+  background-image: url(images/ExtendBackground.png);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
-  background-position: center center;
+  background-position: left top;
 }
 html {
   height: 100%;
@@ -102,6 +102,7 @@ h3 {
 
 #left,
 #right {
+  min-width: 500px;
   width: 500px;
   min-height: 450px;
   margin: 20px;
@@ -140,8 +141,8 @@ h3 {
   width: fit-content;
   background-color: #00ade2;
   color: #fff;
-  bottom: 615px;
-  left: 300px;
+  bottom: 30px;
+  left: 180px;
   padding: 8px 20px;
   border: none;
   border-radius: 10px; /* Add border-radius for rounded edges */
@@ -156,8 +157,8 @@ h3 {
   width: fit-content;
   background-color: #00ade2;
   color: #fff;
-  bottom: 615px;
-  right: 300px;
+  bottom: 30px;
+  right: 180px;
   padding: 8px 20px;
   border: none;
   border-radius: 10px; /* Add border-radius for rounded edges */
