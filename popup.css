@@ -1,7 +1,7 @@
 /* Reset default margin and padding */
 body {
   margin: 0;
-  width: 648px;
+  width: 700px;
   padding: 0px;
   background-image: url("https://usagif.com/wp-content/uploads/gifs/water-99.gif");
   background-size: cover; /* This will ensure the gif covers the entire viewport */
@@ -80,7 +80,7 @@ main {
 .meditation,
 .ambient-sound {
   display: inline-block;
-  margin: 0 20px 10px;
+  margin: 0 23px 10px;
   background-color: transparent;
   text-align: center;
   flex-direction: column; /* Stack text below the image */
@@ -88,7 +88,6 @@ main {
   transition: transform 0.3s;
   position: relative;
 }
-
 .breathe {
   cursor: pointer;
 }
@@ -96,8 +95,8 @@ main {
 .breathe-img,
 .meditation-img,
 .ambient-img {
-  width: 158px; /* Adjust the width as needed */
-  height: 158px; /* Adjust the height as needed */
+  width: 170px; /* Adjust the width as needed */
+  height: 155px; /* Adjust the height as needed */
   display: block;
   margin: 0 auto; /* Center image horizontally */
   opacity: 0.8;
@@ -240,7 +239,9 @@ footer {
 
 .time-display {
   font-family: "Nunito", sans-serif; /* Use Roboto font; fallback to any sans-serif font */
+
   font-size: 17px;
+
   color: rgba(235, 232, 232, 0.829);
   font-weight: bold;
   display: flex;

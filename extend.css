@@ -7,7 +7,13 @@ body {
   flex-direction: column;
   background-color: #acdeed;
   background-image: url(images/ExtendBG.png);
-  background-size: 100vmax;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center center;
+  background-size: cover;
+}
+html {
+  height: 100%;
 }
 /* Style the header image and customize button */
 header {
@@ -55,6 +61,37 @@ main {
   text-align: center;
   flex-direction: column; /* Stack text below the image */
   transition: transform 0.3s;
+}
+/*style play button*/
+.play-sound-btn {
+  position: absolute;
+  top: 85%; /* Center the button vertically */
+  left: 50%; /* Center the button horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ensures the button is perfectly centered, not top-left aligned to the center */
+  background: transparent; /* Assuming you want no background for the button */
+  border: none; /* Removes border */
+  cursor: pointer;
+}
+/*style play button img*/
+.play-img {
+  border-radius: 30px;
+  top: 100px;
+  width: 35px;
+  height: 35px;
+}
+
+/*styling only when hovering over play button */
+.play-sound-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+/*styling only when pressing the play button*/
+.play-sound-btn:active {
+  transform: translate(-50%, -50%) scale(0.8); /*scale down*/
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Style for the visual, movement, and podcast */
